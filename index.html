@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title> Gestão Financeira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+<body>
+    <main id="form_container">
+        <div id="form_header">
+            <h1 id="form_title">
+                Fluxo de Caixa
+            </h1>
+            <button type="button" class="btn-default">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+        </div>
+        <form action="" id="form">
+            <div id="input_container">
+                <div class="input-box">
+                    <label 
+                        for="description" 
+                        class="form-label"
+                    >
+                        Descrição *
+                    </label>
+                    <div class="input-field">
+                        <input
+                            type="text"
+                            name="description"
+                            id="description"
+                            class="form-control"
+                            placeholder="Digite a descrição"
+                        >
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <span  class="error"></span>
+                </div>
+                
+                <div class="input-box">
+                    <label 
+                        for="value" 
+                        class="form-label"
+                    >
+                         Valor *
+                    </label>
+                    <div class="input-field">
+                        <input
+                            type="text"
+                            id="moeda"
+                            class="form-control"
+                            placeholder="R$ 0,00"
+                        >
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <span  class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label 
+                        for="date" 
+                        class="form-label"
+                    >
+                         Data *
+                    </label>
+                    <div class="input-field">
+                        <input
+                            type="date"
+                            name="date"
+                            id="date"
+                            class="form-control"
+                            placeholder="Digite o valor"
+                        >
+                    </div>
+                    <span  class="error"></span>
+                </div>
+
+                <div class="radio-container">
+                    <label class="form-label">
+                        Movimentação *
+                    </label>
+                
+                    <div id="movement_inputs">
+                        <div class="radio-box">
+                            <input 
+                                type="radio"
+                                name="moviment"
+                                id="buy"
+                                class="form-control"
+                                value="buy"
+                            >
+                            <label 
+                                for="buy"
+                                class="form-label"
+                            >
+                                Compra
+                            </label>
+                        </div>
+
+                        <div class="radio-box">
+                            <input 
+                                type="radio"
+                                name="moviment"
+                                id="sell"
+                                class="form-control"
+                                value="sell"
+                            >
+                            <label 
+                                for="sell"
+                                class="form-label"
+                            >
+                                Venda
+                            </label>
+                        </div>                        
+                    </div>
+                    <span  class="error"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn-default">
+                <i class="fa-solid fa-check"></i>
+                ADICIONAR
+
+            </button>
+        </form>
+    </main>
+    <script src="src/javascript/script.js"></script>
+
+<script>
+const campo = document.getElementById("moeda");
+
+campo.addEventListener("input", function(){
+    let valor = campo.value.replace(/\D/g,"");
+    valor = (valor/100).toFixed(2)+"";
+    valor = valor.replace(".",",");
+    valor = valor.replace(/\B(?=(\d{3})+(?!\d))/g,".");
+    campo.value = "R$ " + valor;
+});
+</script>
+
+</body>
+</html>

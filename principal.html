@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/stylesdash.css">
+</head>
+<body>
+    <header>
+        <div class="info-header">
+            <div class="logo">
+                <h2>Finance</h2>
+            </div>
+        </div>
+        <a href="index.html" style="text-decoration: none;"><button type="submit" class="btn-add">
+            <i class="fa-solid fa-plus"> </i>
+        </button></a>
+        </div>
+    </header>    
+    
+    
+
+<!--FIM HEADER-->  
+
+<section class="main">
+    <div class="content">
+        <div class="titulo-secao">
+            <h4>Dashboard Sale</h4>
+            <hr>
+            <p><i class="fa-solid fa-chart-line"></i> / Dash de Fluxo de Caixa</p> 
+        </div>
+    </div><!--content-->
+
+<div class="container">   
+    <div style="background: linear-gradient(#22ac29)" class="box-info-single">
+        <div class="info-text">
+            <h5>Total Entradas</h5>
+            <p>R$10.000</p>
+            <i class="fa-solid fa-money-check-dollar"></i>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(#f53d3d)" class="box-info-single">
+        <div class="info-text">
+            <h5>Total Saídas</h5>
+            <p>R$2.000</p>
+            <i class="fa-solid fa-diagram-next"></i>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(#5653f7)" class="box-info-single">
+        <div class="info-text">
+            <h5>Total Lucro</h5>
+            <p>R$8.000</p>
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+    </div>              
+</div> 
+</section><!--main-->
+
+<!-- GRÁFICO -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+<div class="grafico">
+    <div style="background: linear-gradient(#ffffff)" class="box-info-grafico">
+        <div class="info-text-grafico">
+            <h5>Total Lucro</h5>
+        </div>
+    </div>              
+</div>
+
+</body>
+</html>
